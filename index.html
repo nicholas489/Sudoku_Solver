@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="icon" href="sudoku.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Sudoku Solver</h2>
+    </header>
+    <div>
+        <p id="label">Please input a sudoku board</p>
+    </div>
+    <div id="board-wrapper">
+        <table>
+            <tbody>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr class="horizontal-bottom">
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr class="horizontal-bottom">
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-right"><input type="text" maxlength="1" class="input"></td>
+                    <td class="vertical-left"><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                    <td><input type="text" maxlength="1" class="input"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="buttons">
+        <button id="solve">Solve</button>
+        <button id="clear">Clear Board</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

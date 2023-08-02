@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+    font-family: 'Roboto Slab', Courier, monospace;
+    /* Centers all children elements */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+header {
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+}
+table {
+    height: 80%;
+    border-collapse: collapse;
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+@media screen and (min-width: 640px) {
+    table {
+        height: 70%;
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    table {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+table tbody tr td {
+    border: 2px solid black;
+    padding: 2%;
+}
+input[type=text] {
+    text-align: center;
+    padding: 0%;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+input:disabled {
+    color: black;
+}
+button {
+    font-size: 100%;
+    font-family: 'Roboto Slab', Courier, monospace;
+}
+#board-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+.vertical-right {
+    border-right: 5px solid black;
+}
+.vertical-left {
+    border-left: 5px solid black;
+}
+.horizontal-top {
+    border-top: 5px solid black;
+}
+.horizontal-bottom {
+    border-bottom: 5px solid black;
+}
