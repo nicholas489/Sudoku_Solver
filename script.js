@@ -9,6 +9,34 @@ const board = [[0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0],
                [0,0,0,0,0,0,0,0,0]];
 const inputs = document.getElementsByClassName('input');  // Selects all input boxes from the document -> HTML Collection
+const myTable = document.getElementById('board');
+
+// Creates a function that returns the index of an input box object from an HTML Collection
+const findIndex = (cell, list) => {
+    for (let i = 0; i < list.length; i++) {
+        if (inputs[i] === cell) {
+            return i;
+        }
+    }
+}
+// Creates an event listener that allows the user to navigate the input boxes using the arrow keys 
+myTable.onkeydown = (event) => {
+    if (event.keyCode >= 37 && event.keyCode <= 40) {
+        let currentCell = document.getElementById(event.target.id); // Gives us the current input box that is focused on
+        let cellIndex = findIndex(currentCell, inputs); // Find currentCell's index
+        currentCell.blur(); // Removes the user's focus on this input box
+
+        if (event.keyCode === 37) { // Checks if the left arrow key is struck
+            inputs[cellIndex - 1].focus();
+        } else if (event.keyCode === 38) { // Checks if the up arrow key is struck
+            cellIndex <= 8 ? document.getElementById('clear').focus() : inputs[cellIndex - 9].focus();
+        } else if (event.keyCode === 39) { // Checks if the right arrow key is struck
+            inputs[cellIndex + 1].focus();
+        } else { // Checks if the down arrow key is struck
+            cellIndex >= 72 ? document.getElementById('solve').focus() : inputs[cellIndex + 9].focus();
+        }
+    }
+}
 
 // Creates an event listener that is executed anytime a user inputs something on the webpage
 table.addEventListener("input", (event) => {
